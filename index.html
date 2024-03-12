@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://cdn.jsdelivr.net/gh/SortableJS/Sortable@1.14.0/Sortable.min.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <h1>My To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+	
+	<!-- Add an input for task cost/number -->
+<input type="number" step="0.01" id="taskNumber" placeholder="Enter a number...">
+<div>
+    <div>
+        <input type="checkbox" id="selectAll" class="checkBox" onClick="toggleColumns(this)">
+        <label for="selectAll">Select All</label>
+    </div>
+    <!-- existing columns checkboxes go here -->
+</div>
+	
+<input type="checkbox" id="column1Check" name="column" value="column1"><label for="column1Check">Mon</label>
+<input type="checkbox" id="column2Check" name="column" value="column2"><label for="column2Check">Tue</label>
+<input type="checkbox" id="column3Check" name="column" value="column3"><label for="column3Check">Wed</label>
+<input type="checkbox" id="column4Check" name="column" value="column4"><label for="column4Check">Thu</label>
+<input type="checkbox" id="column5Check" name="column" value="column5"><label for="column5Check">Fri</label>
+<button onclick="addTask()">Add Task</button>
+<div id="columns">
+    <div id="column1"><h2>Mon</h2><ul></ul><div>Total: <span class="total" data-column="column1">0</span></div></div>
+    <div id="column2"><h2>Tue</h2><ul></ul><div>Total: <span class="total" data-column="column2">0</span></div></div>
+    <div id="column3"><h2>Wed</h2><ul></ul><div>Total: <span class="total" data-column="column3">0</span></div></div>
+    <div id="column4"><h2>Thu</h2><ul></ul><div>Total: <span class="total" data-column="column4">0</span></div></div>
+    <div id="column5"><h2>Fri</h2><ul></ul><div>Total: <span class="total" data-column="column5">0</span></div></div>
+</div>
+
+
+    <ul id="taskList">
+        <!-- Tasks will go here -->
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+#app {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#taskInput {
+    margin-right: 10px;
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFEBE8; /* soft peach background */
+    color: #4A4443; /* muted text color for contrast and readability */
+    margin: 0;
+    padding: 20px;
+}
+
+#columns {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Ensures space between columns */
+}
+
+#columns div {
+    background-color: #FFD1BA; /* lighter peach for the column background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow for depth */
+    border-radius: 8px; /* softens the edges */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0px; /* ensures a minimum height for smaller columns */
+}
+
+h2 {
+    color: #E56B6F; /* coral tone */
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+li {
+    background-color: #FAE1DD; /* very soft peach for list items */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px; /* rounded corners for the list items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #E56B6F; /* coral tone */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #C84B56; /* darker tone for hover effect */
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+label {
+    margin-left: 5px;
+    color: #4A4443; /* readability */
+}
+
+/* Additional styles for input fields and labels */
+input, select {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #E56B6F; /* border with coral tone */
+    border-radius: 4px;
+}
+
+/* Styling for checkbox labels to make them more feminine */
+input[type="checkbox"] + label {
+    background-color: #FFD1BA;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* Creating a more recognizable focus state for accessibility */
+input[type="checkbox"]:focus + label,
+button:focus {
+    outline: 2px solid #C84B56;
+}
